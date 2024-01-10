@@ -6,18 +6,6 @@ const calculateTotalForEntry = (entry) => {
   return entry.solidFuels + entry.gas + entry.electricity + entry.liquidFuels;
 };
 
-document.getElementById("dark").addEventListener("click", () => {
-  const mainBody = document.getElementById("mainBodyForBackground");
-  mainBody.classList.remove("lightMood");
-  mainBody.classList.add("darkMode");
-});
-
-document.getElementById("light").addEventListener("click", () => {
-  const mainBody = document.getElementById("mainBodyForBackground");
-  mainBody.classList.remove("darkMode");
-  mainBody.classList.add("lightMood");
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const fetchDataAndCalculateTotal = async () => {
     try {
@@ -196,12 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (scrollableContainer.scrollLeft < 10) {
       errorMessage.innerText = "Cannot scroll backward beyond January 1996";
       errorMessage.style.display = "block";
-    }
-    // else if (scrollableContainer.scrollLeft > maxScrollLeft) {
-    //   errorMessage.innerText = 'Cannot scroll forward beyond the current month';
-    //   errorMessage.style.display = 'block';
-    // }
-    else {
+    } else {
       errorMessage.style.display = "none";
     }
   });

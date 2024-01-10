@@ -3,14 +3,14 @@
 }
 
 /* Define styles for the dark mode */
-.darkMode {
+/* .darkMode {
   background-color: black;
   color: white;
-}
-.lightMood {
+} */
+/* .lightMood {
   background-color: white;
   color: black;
-}
+} */
 
 .mainBody {
   font-family: sans-serif;
@@ -63,18 +63,14 @@
 /* <h1 class="headingClass">This is forcasting website.</h1> */
 .navbarContent {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: sp; */
+  justify-content: space-around;
   margin-bottom: 25px;
 }
 
 .exchangeingButton {
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  color: darkorange;
+  background-color: blue;
+  color: white;
   border-radius: 4px;
   padding: 8px;
   width: 78px;
@@ -82,12 +78,6 @@
   border: 0;
 }
 .exchangeingButton:hover {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 212, 255, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(2, 0, 36, 1) 100%
-  );
   color: white;
   border-radius: 4px;
   padding: 8px;
