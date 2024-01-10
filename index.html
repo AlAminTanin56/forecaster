@@ -1,9 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <title>Forecaster</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body class="mainBody" id="mainBodyForBackground">
+    <div class="dashboardWithNavbar">
+      <!-- Navbar -->
+      <div style="width: 100%" class="holeNavbar">
+        <div class="navbarContent">
+          <button class="exchangeingButton" id="Historical">Historical</button>
+          <button class="exchangeingButton" id="Forecast">Forecast</button>
+
+          <button class="exchangeingButton" id="dark">Dark</button>
+          <button class="exchangeingButton" id="light">Light</button>
+        </div>
+
+        <div style="width: 100%; display: flex; justify-content: center">
+          <div class="custom-select">
+            <select id="filterElement">
+              <option value="Filter: All">Filter: All</option>
+              <option value="solidFuels">Solid Fuels</option>
+              <option value="gas">Gas</option>
+              <option value="electricity">Electricity</option>
+              <option value="liquidFuels">Liquid Fuels</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: center">
+          <div
+            id="errorMessage"
+            style="display: none; color: red; font-weight: bold"
+          ></div>
+        </div>
+
+        <div
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <div style="width: 800px">
+            <div class="theChartParent" id="chartsContainer">
+              <!-- Chart will be dynamically added here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
