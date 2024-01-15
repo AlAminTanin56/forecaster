@@ -1,141 +1,58 @@
-.headingClass {
-  color: crimson;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: radial-gradient(circle, white 0%, #00c8ff 100%);
 }
 
-/* Define styles for the dark mode */
-/* .darkMode {
-  background-color: black;
-  color: white;
-} */
-/* .lightMood {
+.chart-container {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.yearChangingButton {
+  margin-right: 10px;
+  padding: 10px 10px;
+  border-radius: 6px;
   background-color: white;
   color: black;
-} */
-
-.mainBody {
-  font-family: sans-serif;
-  height: 100%;
-}
-.dashboardWithNavbar {
-  display: flex;
-}
-.parentOfDashboard {
-  height: auto;
-  width: 300px;
-}
-.sidebar {
-  position: fixed;
-  height: "100%";
-}
-.dashboard {
-  overflow: hidden;
-  height: 100%;
-  box-shadow: 6px 0px 6px crimson;
-}
-
-.sidebarElement {
-  border-bottom: 1px solid crimson;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  transition-duration: 120ms;
+  border: none;
+  margin-bottom: 20px;
   cursor: pointer;
-}
-
-.sidebarElement:hover {
-  background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
-  padding-top: 12px;
-  padding-bottom: 12px;
   transition-duration: 250ms;
 }
 
-.content {
-  padding-left: 3px;
-  height: 100%;
-}
-.content::-webkit-scrollbar {
-  width: 0.5em;
-}
-
-.content::-webkit-scrollbar-thumb {
-  background-color: crimson;
-}
-
-/* <h1 class="headingClass">This is forcasting website.</h1> */
-.navbarContent {
-  display: flex;
-  /* justify-content: sp; */
-  justify-content: space-around;
-  margin-bottom: 25px;
-}
-
-.exchangeingButton {
-  background-color: blue;
+.yearChangingButton:hover {
+  background: crimson;
   color: white;
-  border-radius: 4px;
-  padding: 8px;
-  width: 78px;
-  transition-duration: 300ms;
-  border: 0;
-}
-.exchangeingButton:hover {
-  color: white;
-  border-radius: 4px;
-  padding: 8px;
-  width: 78px;
-  border: 0;
-  cursor: pointer;
-  transition-duration: 300ms;
+  transition-duration: 633ms;
 }
 
-.theChartParent {
+h2 {
+  text-align: center;
+}
+
+select {
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.options {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  width: 100%;
+  /* padding: 5px; */
+  margin-top: -10px;
 }
 
-.forScroll {
-  overflow-x: scroll;
-}
-.removeScroll {
-  overflow-x: hidden;
-}
-
-.custom-select {
-  position: relative;
-  width: 100%;
-}
-
-.custom-select select {
-  width: 100%;
+.options label {
   padding: 10px;
-  font-size: 16px;
-  border: 3px solid
-    linear-gradient(
-      90deg,
-      rgba(0, 212, 255, 1) 0%,
-      rgba(9, 9, 121, 1) 35%,
-      rgba(2, 0, 36, 1) 100%
-    );
-  border-radius: 5px;
-  appearance: none; /* Remove default arrow */
-}
-
-.custom-select::after {
-  content: "\25BC"; /* Unicode for down arrow */
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.custom-select select:focus {
-  outline: none;
-}
-
-/* Style the dropdown options */
-.custom-select select option {
-  padding: 10px;
-  font-size: 16px;
+  font-weight: bold;
 }

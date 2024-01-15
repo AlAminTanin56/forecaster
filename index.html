@@ -5,47 +5,80 @@
     <title>Forecaster</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="mainBody" id="mainBodyForBackground">
-    <div class="dashboardWithNavbar">
-      <!-- Navbar -->
-      <div style="width: 100%" class="holeNavbar">
-        <div class="navbarContent">
-          <button class="exchangeingButton" id="Historical">Historical</button>
-          <button class="exchangeingButton" id="Forecast">Forecast</button>
-
-          <!-- <button class="exchangeingButton" id="dark">Dark</button>
-          <button class="exchangeingButton" id="light">Light</button> -->
-        </div>
-
-        <div style="width: 100%; display: flex; justify-content: center">
-          <div class="custom-select">
-            <select id="filterElement">
-              <option value="Filter: All">Filter All</option>
-              <option value="solidFuels">Solid Fuels</option>
-              <option value="gas">Gas</option>
-              <option value="electricity">Electricity</option>
-              <option value="liquidFuels">Liquid Fuels</option>
-            </select>
-          </div>
-        </div>
-
-        <div style="display: flex; justify-content: center">
-          <div
-            id="errorMessage"
-            style="display: none; color: darkred; font-weight: bold"
-          ></div>
-        </div>
-
-        <div
-          style="display: flex; justify-content: center; align-items: center"
+  <body style="margin-top: -25px;">
+    <div class="chart-container">
+      <h2>Forecaster Information Analysis</h2>
+      <div class="options">
+        <input
+          type="radio"
+          name="option"
+          id="history"
+          onclick="toggleControls(true)"
+          checked
+        />
+        <label for="history">Historical Data</label>
+        <input
+          type="radio"
+          name="option"
+          id="forecast"
+          onclick="toggleControls(false)"
+        />
+        <label for="forecast">Forecasting Data</label>
+      </div>
+      <!-- The buttons... -->
+      <div class="controls">
+        <button
+          class="yearChangingButton"
+          style="margin-top: 10px; width: 80px"
+          onclick="changeYear(-1)"
         >
-          <div style="width: 800px">
-            <div class="theChartParent" id="chartsContainer">
-              <!-- Chart will be dynamically added here -->
-            </div>
-          </div>
+          Previous
+        </button>
+        <button
+          class="yearChangingButton"
+          style="margin-top: 10px; width: 80px"
+          onclick="changeYear(1)"
+        >
+          Next
+        </button>
+        <div>
+          <label for="yearSelector">Select Year:</label>
+          <select
+            style="width: 120px"
+            id="yearSelector"
+            onchange="updateChart()"
+          >
+            <option value="1996">1996</option>
+            <option value="1997">1997</option>
+            <option value="1998">1998</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+          </select>
         </div>
       </div>
+      <canvas id="fuelChart"></canvas>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
